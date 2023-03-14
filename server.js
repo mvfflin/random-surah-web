@@ -19,7 +19,7 @@ if (!app.locals.title) {
 }
 
 app.get("/", (req, res) => {
-  let folder = "./quran-json/surah";
+  let folder = "./quran-json-local/surah";
   let numberSurah = Math.floor(Math.random() * 115);
   let surahFile = folder + "/" + numberSurah + ".json";
   let surahReq = require(surahFile);
