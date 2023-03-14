@@ -1,0 +1,23 @@
+<% if (locals.error) { %>
+<h4 class="text-danger">Error!</h4>
+<h5 class="mb-5"><%= error %></h5>
+<% } %>
+
+<h1 class="">welcome to random surah website</h1>
+<h1 class="">website simple ajah buat random surat sm ayat</h1>
+<img class="gambar img-thumbnail img-fluid mt-5" src="/img/catquran.jpg" />
+<% if (locals.displaySurah && locals.displayAyat) { %>
+<h1 class="mt-5">
+  Surah : <%= displaySurah %> Ayat : <%= displayNumberVerse %>
+</h1>
+<h2 class="my-4"><%= displayAyat %></h2>
+<h4 class="my-4">Translate : <%= displayTranslate %></h4>
+<% } else { %>
+<h3>
+  no random surah is displayed. try to refresh it<br />if it still doesn't work
+  then try to contact @<a href="https://github.com/mvfflin">mvfflin</a>
+</h3>
+<% } %>
+<button class="btn btn-primary" onclick="window.location = window.location">
+  Refresh
+</button>
